@@ -1,6 +1,6 @@
 // clockp5
 
-let game_title = "* clockp5 * c1.1"
+let game_title = "* clockp5 * c2.0"
 let [canvas_W, canvas_H] = [600, 400];
 let clock_X = canvas_W / 2;
 let clock_Y = canvas_H / 2;
@@ -72,11 +72,11 @@ function set_clock(clock_R, clock_G, clock_B, clock_X, clock_Y, clock_W, clock_H
   }
 
   textSize(20);
-  textFont("Comic Sans MS");
+  textFont("Crimson Text");
   textAlign(CENTER, CENTER);
   noStroke();
   fill(10);
-  text(now.getHours() + " : " + now.getMinutes() + " : " + now.getSeconds(), clock_X, clock_Y);
+  text(nf(now.getHours(), 2) + " : " + nf(now.getMinutes(), 2) + " : " + nf(now.getSeconds(), 2), clock_X, clock_Y);
 
   pop();
 }
